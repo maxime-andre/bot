@@ -1,7 +1,8 @@
 all: bot
-bot: main.o connection.o
-	g++ main.o connection.o -o bot
+bot: main.o connection.o configuration.o
+	g++ main.o connection.o configuration.o -o bot
 connection.o: connection.cpp connection.h
+configuration.o: configuration.cpp configuration.h
 main.o: main.cpp
 
 clean:
